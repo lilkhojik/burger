@@ -1,0 +1,278 @@
+@import './fonts.css';
+
+:root {
+    --open700: "OpenBold";
+    --open400: "OpenRegular";
+    --saira: "Saira";
+    --purple: #3E284F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.container {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.nav {
+    background: var(--purple);
+    box-shadow: 0px 0px 20px rgba(62, 40, 79, 0.5);
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.nav__info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__logo {
+    font-family: var(--saira);
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.korzinka {
+    position: relative;
+}
+
+.korzinka img {
+    width: 30px;
+}
+
+.korzinka__item {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #FFFFFF;
+    border: 1px solid var(--purple);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--open700);
+    font-size: 15px;
+    line-height: 10px;
+    color: var(--purple);
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.korzinka__item.active {
+    opacity: 1;
+}
+
+.header__info {
+    max-width: 1075px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-image: url(../images/header_bg.png);
+    height: 530px;
+    margin-top: 20px;
+}
+
+.header__img {
+    width: 400px;
+    margin-right: 180px;
+}
+
+.box {
+    display: flex;
+    margin-top: 80px;
+    justify-content: space-between;
+}
+
+.card {
+    max-width: 306px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F4F4F4;
+    box-shadow: 0px 20px 20px -15px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    position: relative;
+    padding: 16px;
+}
+
+.card__span {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: -15px;
+    top: -15px;
+    background-color: var(--purple);
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--open400);
+    font-size: 16px;
+    line-height: 16px;
+    color: #FFFFFF;
+    transition: 0.5s;
+    transform: scale(0);
+}
+
+.card__span.active {
+    transform: scale(1);
+}
+
+.card__img {
+    width: 170px;
+    position: absolute;
+    transform: translateY(-70px);
+}
+
+.card__title {
+    font-family: var(--saira);
+    margin-top: 70px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #404040;
+}
+
+.card__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.card__price {
+    padding: 10px;
+    background: #3E284F;
+    border-radius: 10px;
+    font-family: var(--open700);
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.relative {
+    position: relative;
+}
+.basket {
+    position: absolute;
+    right: 0;
+    top: -500px;
+    max-width: 360px;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.basket.active{
+    top: 10px;
+}
+.basket__img {
+    width: 70px;
+}
+.basket__info {
+    background: #775194;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: var(--open700);
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 16px;
+}
+
+.basket__content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 270px;
+}
+
+.basket__card {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+}
+
+.basket__item {
+    margin-left: 10px;
+    flex-grow: 1;
+}
+
+.basket__item .card__title {
+    margin-top: 0;
+}
+
+.basket__price {
+    font-family: var(--open400);
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+.basket__btn {
+    display: flex;
+}
+
+.basket__symbol {
+    padding: 4px 8px;
+    border-radius: 4px 0 0 4px;
+    background: #BBBBBB;
+
+}
+
+.basket__symbol:last-of-type {
+    border-radius: 0 4px 4px 0;
+}
+
+.basket__count {
+    padding: 2px 8px;
+    background: #EEEEEE;
+    border: 0.5px solid #BBBBBB;
+    font-family: var(--open700);
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.basket__check {
+    background: #00A441;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    padding: 14px;
+ 
+
+}
+.basket__order,
+.basket__totalPrice{
+    font-family: var(--open700);
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
